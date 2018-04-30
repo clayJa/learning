@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单作业</title>
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <div class="username">
+                <label for="username">用户名：</label>
+                <input id="username" name="username" type="text">
+            </div>
+            <div class="password">
+                <label for="password">密码：</label>
+                <input id="password" name="password" type="password">
+            </div>
+            <div class="sex">
+                <label for="sex">性别</label>
+                <input name="sex" type="radio" value="男" checked>男
+                <input name="sex" type="radio" value="女">女
+            </div>
+            <div class="sex-love">
+                <label for="sex">取向</label>
+                <input name="sex_love" type="radio" value="男" checked>男
+                <input name="sex_love" type="radio" value="女">女
+            </div>
+            <div class="hobby">
+                <label for="sex">爱好</label>
+                <input name="hobby" type="checkbox" value="dota">dota
+                <input name="hobby" type="checkbox" value="旅游" checked>旅游
+                <input name="hobby" type="checkbox" value="宠物" checked>宠物
+            </div>
+            <div class="remark">
+                <label for="remark">评论</label>
+                <textarea id="remark" name="remark"></textarea>
+            </div>
+            <span class="my_car">
+                <label>我的car</label>
+                <select>
+                    <option value ="萨博">萨博</option>
+                    <option value ="奔驰">奔驰</option>
+                    <option value="宝马">宝马</option>
+                </select>
+            </span>
+            <span class="submit">
+                <input type="submit" name="submit">
+            </span>
+        </form>
+    </div>
+</body>
+</html>
