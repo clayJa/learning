@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>triangle</title>
+    <style>
+        .tri{
+            width: 0;
+            height: 0;
+            margin-bottom: 1rem;
+            border-top: blue 1rem solid;
+            border-right: yellow 1rem solid;
+            border-bottom: green 1rem solid;
+            border-left: red 1rem solid;
+        }
+        .border_left_transparent{
+            border-left: transparent 1rem solid;
+        }
+        .border_right_transparent{
+            border-right: transparent 1rem solid;
+        }
+        .border_top_transparent{
+            border-top: transparent 1rem solid;
+        }
+        .border_bottom_transparent{
+            border-bottom: transparent 1rem solid;
+        }
+        .rightangle{
+            border-width: .7rem;
+        }
+        .red{
+            border-bottom-color: red;
+        }
+        .green{
+            border-right-color: green;
+        }
+        .tri_3
+        .tri_4
+        .tri_5
+        .tri_6
+        .tri_7
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tri"></div>
+        <div class="tri border_left_transparent border_right_transparent border_bottom_transparent"></div>
+        <div class="tri border_top_transparent border_right_transparent border_bottom_transparent"></div>
+        <div class="tri border_left_transparent border_top_transparent border_bottom_transparent"></div>
+        <div class="tri border_left_transparent border_top_transparent border_right_transparent"></div>
+        <div class="tri border_top_transparent border_right_transparent rightangle red"></div>
+        <div class="tri border_top_transparent border_left_transparent rightangle green"></div>
+        <div class="tri_7"></div>
+    </div>
+</body>
+</html>
