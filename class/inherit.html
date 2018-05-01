@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS继承</title>
+    <style>
+        .parent{
+            /* 可继承属性 */
+            line-height: 100%;
+            font-size: 15px;
+            font-weight: bold;
+            color: red;
+            direction: rtl;
+            cursor: crosshair;
+            text-shadow: 10px 1px 1px saddlebrown;
+            /* 不可继承属性 */
+            background-color: greenyellow;
+            display: inline-block;
+            width: 400px;
+            height: 30px;
+            margin: 10px;
+            padding: 1px;
+            border: gray 1px solid;
+            outline: salmon 1px dashed;
+            position: absolute;
+            top: 100px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        我是你爸爸
+        <div class="child">你爸爸是我爷爷你爸爸是我爷爷</div>
+    </div>
+</body>
+</html>
