@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-Cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       body{
+           background: #fff2e3;
+       }
+       .clear{
+           clear: both;
+       }
+       .title{
+           color: #87968E;
+           text-align: center;
+           font-size: 3rem;
+           margin: 1.5rem;
+       }
+       .description{
+           text-align: center;
+           opacity: .6;
+           color: #b7bbb0;
+           font-size: 1rem;
+           font-weight: normal;
+           margin: 1.5rem;
+       }
+       .project_list,.project_img,.more_about{
+           display: flex;
+           justify-content: center;
+       }
+       .project_list .item{
+            list-style: none;
+            display: inline-block;
+            width: 5.4rem;
+            height: 2.6rem;
+            font-size: 1.2rem;
+            border-radius: 0.2rem;
+            background: #75b890;
+            text-align: center;
+            line-height: 2.6rem;
+            margin: 2rem .5rem;
+       }
+       .item a{
+           text-decoration: none;
+           color: #fff;
+       }
+       .project_list .item:hover,.active,.more_about a:hover{
+           opacity: .6;
+       }
+       .img_wrapper{
+           width: 25rem;
+           height: 18rem;
+       }
+       .img_wrapper img{
+           vertical-align: top;
+           max-width: 100%;
+           max-height: 100%;
+       }
+       .more_about a{
+            text-decoration: none;
+            display: inline-block;
+            width: 5.4rem;
+            height: 2.6rem;
+            font-size: 1.2rem;
+            border-radius: 0.2rem;
+            background: #75b890;
+            color: white;
+            text-align: center;
+            line-height: 2.6rem;
+            margin: 2rem .5rem;
+       }
+       .author{
+           text-align: center;
+           font-size: 1rem;
+           color: #87968e;
+       }
+       .author a{
+           text-decoration: none;
+           color: #75b890;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <h1 class="title">我的项目</h1>
+       <h4 class="description">一句话项目介绍</h4>
+       <div class="project_list clear">
+           <ul class="list_ul">
+               <li class="item active"><a href="#">项目1</a></li>
+               <li class="item"><a href="#">项目2</a></li>
+               <li class="item"><a href="#">项目3</a></li>
+               <li class="item"><a href="#">项目4</a></li>
+               <li class="item"><a href="#">项目5</a></li> 
+           </ul>
+       </div>
+       <div class="project_img">
+           <div class="img_wrapper">
+               <img src="http://7xpvnv.com2.z0.glb.qiniucdn.com/65d4aba2-a097-4b24-aaa0-ebbaf7eedab2" alt="项目缩略图">
+           </div>
+       </div>
+       <div class="more_about">
+           <a href="#" class="code">查看源码</a>
+           <a href="" class="readme">使用说明</a>
+       </div>
+       <div class="author">作者：<a href="#">我</a></div>
+    </div>
+</body>
+</html>
