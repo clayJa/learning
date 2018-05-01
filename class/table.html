@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格</title>
+    <style>
+        .container{
+            margin-top: 1rem;
+            margin-left: 9rem;
+        }
+        .table1,.table2{
+            border-collapse: collapse;
+        }
+        .table .table_cell{
+            display: inline-block;
+            padding: .5rem;
+        }
+        .table .table_cell:first-child,.table .table_cell:nth-child(2){
+            width: 11rem;
+        }
+        .table .table_cell:last-child{
+            width: 7.5rem;
+        }
+        .table_header{
+            font-weight: bold;
+        }
+        .table .table_tr:nth-child(even){
+            background-color: #f1f1f1;
+            border-top: #ddd 1px solid;
+            border-bottom: #ddd 1px solid;
+        }
+        .table1{
+            border: #ddd 1px solid;
+        }
+        .table1 .table_header{
+            color: white;
+            background-color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="table">
+            <table class="table1">
+                <tr class="table_header">
+                    <td class="table_cell">First Name</td>
+                    <td class="table_cell">Last Name</td>
+                    <td class="table_cell">Points</td>
+                </tr>
+                <tr class="table_tr">
+                    <td class="table_cell">Jill</td>
+                    <td class="table_cell">Smith</td>
+                    <td class="table_cell">50</td>
+                </tr>
+                <tr class="table_tr">
+                        <td class="table_cell">Eve</td>
+                        <td class="table_cell">Jackson</td>
+                        <td class="table_cell">94</td>
+                </tr>
+                <tr class="table_tr">
+                        <td class="table_cell">Adam</td>
+                        <td class="table_cell">Johnson</td>
+                        <td class="table_cell">67</td>
+                </tr>
+                <tr class="table_tr">
+                        <td class="table_cell">Bo</td>
+                        <td class="table_cell">Nilsson</td>
+                        <td class="table_cell">50</td>
+                </tr>
+                <tr class="table_tr">
+                        <td class="table_cell">Mike</td>
+                        <td class="table_cell">Ross</td>
+                        <td class="table_cell">35</td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="table">
+            <table class="table2">
+                <tr class="table_header">
+                    <td class="table_cell">First Name</td>
+                    <td class="table_cell">Last Name</td>
+                    <td class="table_cell">Points</td>
+                </tr>
+                <tr class="table_tr">
+                    <td class="table_cell">Jill</td>
+                    <td class="table_cell">Smith</td>
+                    <td class="table_cell">50</td>
+                </tr>
+                <tr class="table_tr">
+                        <td class="table_cell">Eve</td>
+                        <td class="table_cell">Jackson</td>
+                        <td class="table_cell">94</td>
+                </tr>
+                <tr class="table_tr">
+                        <td class="table_cell">Adam</td>
+                        <td class="table_cell">Johnson</td>
+                        <td class="table_cell">67</td>
+                </tr>
+                <tr class="table_tr">
+                        <td class="table_cell">Bo</td>
+                        <td class="table_cell">Nilsson</td>
+                        <td class="table_cell">50</td>
+                </tr>
+                <tr class="table_tr">
+                        <td class="table_cell">Mike</td>
+                        <td class="table_cell">Ross</td>
+                        <td class="table_cell">35</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</body>
+</html>
