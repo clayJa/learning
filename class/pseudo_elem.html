@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pseudo element</title>
+    <style>
+        .first,.second,.third{
+            position: relative;
+            border: 1px solid #cbcbcb;
+            width: 150px;
+            height: 70px;
+            margin: 50px;
+        }
+        .first::before{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            border: 10px solid transparent;
+            border-bottom: 10px solid #888;
+        }
+        .second::before{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: -1px;
+            left: 136px;
+            border: 7.071px solid transparent;
+            border-top: 7.071px solid red;
+            border-right: 7.071px solid red;
+        }
+        .third::before{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: -7px;
+            left: 14px;
+            height: 12px;
+            width: 12px;
+            background: #fff;
+            border-bottom: 1px solid #cbcbcb;
+            border-left: 1px solid #cbcbcb;
+            transform: rotate(135deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="first"></div>
+    <div class="second"></div>
+    <div class="third"></div>
+</body>
+</html>
