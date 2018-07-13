@@ -1,0 +1,628 @@
+  body,html,ul,li,div,h1,h2,h3,h4,h5 {
+    margin: 0;
+    padding: 0;
+  }
+  input, textarea {
+    display: block;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+  }
+
+  .clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  ::-moz-selection { 
+    background: #fed136;
+  }
+  ::selection { 
+    background: #fed136;
+  }
+  a {
+    text-decoration: none;
+  }
+  header {
+    height: 760px;
+    background-image: url('../img/header-bg.jpg');
+    border: 1px solid transparent;
+  }
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 20px;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+  .nav-title {
+    color: #fed136;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+    font-size: 28px;
+    float: left;
+  }
+  .nav-menu {
+    position: absolute;
+    left: 180px;
+  }
+  .nav-menu .icon-menu {
+    font-size: 30px;
+    color: white;
+  }
+  .nav-menu span {
+    background: #fec503;
+    padding: 1px 6px;
+    border-radius: 3px;
+    display: block;
+  }
+  .nav-link__ul > li {
+    float: left;
+    margin: 20px;
+    font-weight: 500;
+  }
+  .nav-link__ul > li  a {
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+  }
+  .nav-link__ul > li  a:hover{
+    color: #fec503;
+  }
+  .container {
+    margin: 0 auto;
+    border: 1px solid transparent;
+  }
+  section:not(:last-of-type):nth-child(even) {
+    background: #f7f7f7;
+  }
+  .intro {
+    height: 380px;
+    color: white;
+    text-align: center;
+    margin: 280px auto 0;
+  }
+  .intro-text__greeting {
+    text-transform: uppercase;
+  }
+  .intro-text__button,.contact__button {
+    display: inline-block;
+    margin: 50px;
+    padding: 20px 30px;
+    background: #fec503;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+  }
+  .intro-text__button:hover, .contact__button:hover{
+    cursor: pointer;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-top: 100px;
+  }
+  .section-intro {
+    text-align: center;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 50px;
+  }
+  .services-list {
+    margin-bottom: 150px;
+  }
+  .services-list .card{
+    float: left;
+    text-align: center;
+  }
+  .card__name {
+    margin: 20px;
+    font-size: 18px
+  }
+  .card__detail {
+    color: #777;
+    font-size: 14px;
+    line-height: 2;
+  }
+  .services-list .iconfont{
+    font-size: 68px;
+    color: white;
+  }
+  .services-list .card span {
+    background: #fed136;
+    border-radius: 50%;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+  }
+  .portfolio-list {
+    text-align: center;
+    margin-bottom: 150px;
+  }
+  .portfolio-list .card{
+    display: inline-block;
+    margin: 15px;
+    background: white;
+  }
+  .portfolio-list .img-container,.portfolio-list .img-container img {
+    height: 100%;
+    width: 100%;
+  }
+  .card__caption h4{
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .card__caption p{
+    font-size: 14px;
+    color: #777;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 5px;
+  }
+  .img-hover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .img-hover span {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .2s linear;
+  }
+  .img-hover .icon-add{
+    font-size: 40px;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    color: white;
+    background: #fec503;
+    line-height: 8;
+  }
+  .img-hover:hover > span {
+    display: inline-block;
+    opacity: 1;
+    transition: all .2s linear;
+  }
+  .about-list > ul > li {
+    margin-bottom: 80px;
+    max-height: 280px;
+  }
+  .about-list .image-container,.about-list .end {
+    display: inline-block;
+    position: relative;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 10px solid #f1f1f1;
+  }
+  .image-container img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    border-radius: 50%;
+  }
+  .image-detail {
+    width: 50%;
+  }
+  .about-list h4 {
+    font-size: 16px;
+  }
+  .about-list p {
+    font-size: 14px;
+    color: #777;
+  }
+  .image-detail .image-desc {
+    max-width: 60%;
+    display: inline-block;
+  }
+  .end span {
+    display: inline-block;
+    max-width: 112px;
+    position: absolute;
+    top: 50px;
+    left: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 40px;
+    height: 60px;
+    color: white;
+  }
+  .about-list .end {
+    background: #fed136;
+  }
+  .connect::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 3px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 170px;
+    left: 80px;
+  }
+  .about-list {
+    margin-bottom: 400px
+  }
+  .team-list {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+  .team-list .image-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .team-list  .card{
+    display: inline-block;
+    margin: 15px;
+  }
+  .team-list .name {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  .team-list .duty {
+    color: #777;
+    font-weight: 400;
+    font-size: 13px;
+  }
+  .team-list .contact i, .contact-us i {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
+    line-height: 40px;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    vertical-align: top;
+  }
+  .team-list .contact i:last-child, .contact-us i:last-child {
+    font-size: 30px;
+  }
+  #team .container {
+    text-align: center;
+  }
+  .conclusion {
+    display: inline-block;
+    width: 65%;
+    font-size: 14px;
+    color: #777;
+    margin: 20px 0 150px;
+  }
+  .ad-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .ad-list .logo-image {
+    padding: 35px 20px;
+    text-align: center;
+  }
+  #contact {
+    background-image: url('../img/map-image.png');
+    background-color: black;
+  }
+  #contact .section-title {
+    color: white;
+  }
+  .your-information, .your-message {
+    display: inline-block;
+    width: 40%;
+  }
+  .your-information input {
+    margin: 0 10px 35px;
+    width: 100%;
+    height: 34px;
+  }
+  .your-message textarea {
+    margin: 0 10px 35px;
+    width: 100%;
+    height: 200px;
+  }
+  #contact .container {
+    text-align: center;
+  }
+  .contact__button {
+    color: white;
+    margin: 10px 0 150px;
+  }
+  
+  footer {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .copyright {
+    width: 30%;
+  }
+  .copyright, .contact-us, .quicklinks {
+    display: inline-block;
+    width: 30%;
+    font-size: 14px;
+    max-height: 50px;
+    text-align: center;
+  }
+  .copyright{
+    font-size: 14px;
+    color: #777;
+  }
+  .quicklinks a{
+    color: #fed136;
+    font-size: 14px;
+    margin: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width:767px) {
+    .container {
+      width: 100%;
+    }
+    nav {
+      width: 100%;
+    }
+    .intro-text__welcome {
+      font-size: 24px;
+    }
+    .intro-text__greeting {
+      font-size: 45px;
+    }
+    .nav-menu {
+      display: inline-block;
+    }
+    .nav-link {
+      display: none;
+    }
+    .services-list .card{
+      width: 100%;
+    }
+    .portfolio-list .card,.team-list  .card{
+      width: 60%;
+    }
+    .team-list {
+      justify-content: center;
+    }
+    .image-detail {
+      float: right;
+      width: 65%
+    }
+    .image-detail .image-desc {
+      max-width: 100%;
+    }
+    .about-list .image-container,.about-list .end {
+      width: 100px;
+      height: 100px;
+      margin-left: 10%;
+      margin-right: 5%;
+    }
+    .end span {
+      max-width: 100px;
+      top: 24px;
+      left: 10px;
+      font-size: 14px;
+      padding: 0 10px;
+      height: 60px;
+    }
+    .connect::before {
+      height: 250%;
+      width: 3px;
+      top: 100%;
+      left: 50%;
+    }
+    .ad-list .logo-image {
+      width: 50%;
+    }
+    .your-information, .your-message {
+      width: 60%;
+    }
+  }
+  @media (min-width:768px) {
+    .container {
+      width: 100%;
+    }
+    nav {
+      width: 100%;
+    }
+    .intro-text__welcome {
+      font-size: 20px;
+    }
+    .intro-text__greeting {
+      font-size: 55px;
+    }
+    .nav-menu {
+      display: none;
+    }
+    .nav-link {
+      display: inline-block;
+    }
+    .services-list .card{
+      width: 100%;
+    }
+    .portfolio-list .card{
+      width: 45%;
+    }
+    .team-list  .card{
+      width: 60%;
+    }
+    .team-list {
+      justify-content: center;
+    }
+    #portfolio .container {
+      width: 80%;
+    }
+    .about-list li:nth-child(odd) .image-detail{
+      float: left;
+      text-align: right;
+      margin-left: -100px;
+    }
+    .about-list li:nth-child(even) .image-detail{
+      float: right;
+      text-align: left;
+      margin-right: -114px;
+    }
+    .about-list .image-container,.about-list .end {
+      position: absolute;
+      left: 50%;
+      margin-left: -85px;
+    }
+    .ad-list .logo-image {
+      width: 40%;
+    }
+    .your-information, .your-message {
+      width: 60%;
+    }
+  }
+  @media (min-width:992px) {
+    .container {
+      width: 90%;
+    }
+    nav {
+      width: 100%;
+    }
+    .intro-text__welcome {
+      font-size: 30px;
+    }
+    .intro-text__greeting {
+      font-size: 65px;
+    }
+    .nav-menu {
+      display: none;
+    }
+    .nav-link {
+      display: inline-block;
+    }
+    .services-list .card,.portfolio-list .card, .team-list  .card{
+      width: 30%;
+    }
+    .services-list {
+      display: flex;
+      justify-content: space-around;
+    }
+    .about-list li:nth-child(odd) .image-detail{
+      float: left;
+      text-align: right;
+      margin-left: -100px;
+    }
+    .about-list li:nth-child(even) .image-detail{
+      float: right;
+      text-align: left;
+      margin-right: -114px;
+    }
+    .about-list .image-container,.about-list .end {
+      position: absolute;
+      left: 50%;
+      margin-left: -85px;
+    }
+    .ad-list .logo-image {
+      width: 40%;
+    }
+    .your-information, .your-message {
+      width: 60%;
+    }
+  }
+  @media (min-width:1200px) {
+    .container {
+      width: 60%;
+    }
+    nav {
+      width: 80%;
+    }
+    .intro-text__welcome {
+      font-size: 40px;
+    }
+    .intro-text__greeting {
+      font-size: 75px;
+    }
+    .nav-menu {
+      display: none;
+    }
+    .nav-link {
+      display: inline-block;
+    }
+    .services-list .card,.portfolio-list .card, .team-list  .card{
+      width: 30%;
+    }
+    .services-list {
+      display: flex;
+      justify-content: space-around;
+    }
+    .about-list li:nth-child(odd) .image-detail{
+      float: left;
+      text-align: right;
+      margin-left: -100px;
+    }
+    .about-list li:nth-child(even) .image-detail{
+      float: right;
+      text-align: left;
+      margin-right: -114px;
+    }
+    .about-list .image-container,.about-list .end {
+      position: absolute;
+      left: 50%;
+      margin-left: -85px;
+    }
+    .ad-list .logo-image {
+      width: 18%;
+    }
+    .your-information {
+      float: left;
+    }
+    .your-information, .your-message {
+      width: 40%;
+    }
+  }
+
+  /* end of response */
