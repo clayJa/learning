@@ -46,7 +46,7 @@
   }
   header {
     height: 760px;
-    background-image: url('../img/header-bg.jpg');
+    background-image: url('https://i.loli.net/2018/07/14/5b499d37c28a2.png');
     border: 1px solid transparent;
   }
   nav {
@@ -340,7 +340,7 @@
     text-align: center;
   }
   #contact {
-    background-image: url('../img/map-image.png');
+    background-image: url('https://i.loli.net/2018/07/14/5b499d37c94a4.png');
     background-color: black;
   }
   #contact .section-title {
