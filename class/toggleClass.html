@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>toggleClass</title>
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_993231_9bmlqbtw5kq.css">
+  <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+  <style>
+    .iconfont {
+      color: red;
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <span class="play-pause"><i class="iconfont icon-pause "></i></span>
+</body>
+<script>
+  $('.play-pause').on('click', function(){
+    $(this).find('.iconfont') .toggleClass('icon-pause').toggleClass('icon-play')
+  })
+</script>
+</html>
