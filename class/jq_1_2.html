@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jq_1_1</title>
+  <style id="jsbin-css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin-left: 10px;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 20px;
+
+    }
+
+    .tab li {
+      float: left;
+      background: #ededed;
+      padding: 6px 20px;
+      border-top: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .tab li:last-child {
+      border-right: 1px solid #ccc;
+    }
+
+    .tab li.active {
+      background: white;
+    }
+
+    .claerfix::after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    .panel div {
+      width: 201px;
+      height: 200px;
+      border: 1px solid #ccc;
+      background: white;
+      display: none;
+    }
+
+    .panel .active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="tab">
+      <ul class="claerfix">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="item-1 active">item-1</div>
+      <div class="item-2">item-2</div>
+      <div class="item-3">item-3</div>
+      <div class="item-4">item-4</div>
+    </div>
+  </div>
+  <script>
+    document.querySelector('.tab').addEventListener('click', function (e) {
+      if (e.target.tagName.toLowerCase() === 'li') {
+        var curIndex;
+        e.target.parentElement.querySelectorAll('li').forEach(function (node, index) {
+          node.classList.remove('active');
+          if (node.isSameNode(e.target)) {
+            curIndex = index;
+          }
+        });
+        e.target.classList.add('active');
+        e.target.parentElement.parentElement.nextElementSibling.querySelectorAll('div').forEach(function (node,
+          index) {
+          node.classList.remove('active');
+          if (index === curIndex) {
+            node.classList.add('active');
+          }
+        });
+      }
+    }, false);
+  </script>
+</body>
+
+</html>
