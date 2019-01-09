@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jq_3_2</title>
+  <style>
+    ul {
+      list-style: none;
+    }
+
+    .clearfix::after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    .btn-list {
+      float: left;
+      margin: 5px;
+    }
+
+    .btn-list span {
+      cursor: pointer;
+      padding: 2px 5px;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      color: #666;
+    }
+
+    #animate-block {
+      width: 100px;
+      height: 100px;
+      background: purple;
+    }
+  </style>
+  <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <ul class="clearfix">
+        <li class="btn-list"><span class="btn1">show</span></li>
+        <li class="btn-list"><span class="btn2">hide</span></li>
+        <li class="btn-list"><span class="btn3">slideUp</span></li>
+        <li class="btn-list"><span class="btn4">slideDown</span></li>
+        <li class="btn-list"><span class="btn5">slideToggle</span></li>
+        <li class="btn-list"><span class="btn6">fadeIn</span></li>
+        <li class="btn-list"><span class="btn7">fadeOut</span></li>
+        <li class="btn-list"><span class="btn8">animate</span></li>
+      </ul>
+    </div>
+    <div id="animate-block">
+    </div>
+  </div>
+  <script>
+    $('.btn1').on('click', function () {
+      $('#animate-block').show(500, 'linear', function () {
+        $('body').append('<p>show complete.</p>');
+      })
+    });
+    $('.btn2').on('click', function () {
+      $('#animate-block').hide(500, 'linear', function () {
+        $('body').append('<p>hide complete.</p>');
+      })
+    });
+    $('.btn3').on('click', function () {
+      $('#animate-block').slideUp(500, 'linear', function () {
+        $('body').append('<p>slideUp complete.</p>');
+      })
+    });
+    $('.btn4').on('click', function () {
+      $('#animate-block').slideDown(500, 'linear', function () {
+        $('body').append('<p>slideDown complete.</p>');
+      })
+    });
+    $('.btn5').on('click', function () {
+      $('#animate-block').slideToggle(500, 'linear', function () {
+        $('body').append('<p>slideToggle complete.</p>');
+      })
+    });
+    $('.btn6').on('click', function () {
+      $('#animate-block').fadeIn(500, 'linear', function () {
+        $('body').append('<p>fadeIn complete.</p>');
+      })
+    });
+    $('.btn7').on('click', function () {
+      $('#animate-block').fadeOut(500, 'linear', function () {
+        $('body').append('<p>fadeOut complete.</p>');
+      })
+    });
+    $('.btn8').on('click', function () {
+      $('#animate-block').animate({
+        left: '+=50',
+        height: '300'
+      }, 500, 'linear', function () {
+        $('body').append('<p>animate complete.</p>');
+      })
+    });
+  </script>
+</body>
+
+</html>
