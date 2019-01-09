@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jq_3_1</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+    }
+
+    .container {
+      width: 750px;
+      margin: 10px auto;
+    }
+
+    .clearfix::after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    .goods-list .item {
+      position: relative;
+      float: left;
+      padding: 10httppx;
+      border: 1px solid #ccc;
+      margin: 10px;
+    }
+
+    .goods-list .item p {
+      font-size: 12px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      margin-left: 8px;
+    }
+
+    .goods-list .item .goods-title {
+      color: #6e6e6e;
+    }
+
+    .goods-list .item .price {
+      color: rgb(200, 22, 35);
+    }
+
+    .goods-list ul {
+      list-style: none;
+    }
+
+    .goods-list .mask {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(115, 115, 115, .6);
+      visibility: hidden;
+      animation: all 1.5s;
+    }
+
+    .goods-list .mask.show {
+      visibility: visible;
+      animation: all 1.5s;
+    }
+
+    .goods-list .mask .delBtn,
+    .container .operator .add,
+    .delBtn,
+    .container .operator .edit {
+      color: rgb(200, 22, 35);
+      padding: 5px 10px;
+      background: white;
+      border: 1px solid rgb(200, 22, 35);
+      border-radius: 4px;
+    }
+
+    .container .operator {
+      margin-top: 20px;
+      margin-left: 10px;
+    }
+  </style>
+  <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">珠宝首饰</h2>
+    <div class="goods-list">
+      <ul class="clearfix">
+        <li class="item">
+          <img src="https://picsum.photos/200/200/?image=1" alt="">
+          <p class="goods-title">藏美千足金</p>
+          <p class="price">￥1699.00</p>
+          <div class="mask">
+            <span class="delBtn">删除</span>
+          </div>
+        </li>
+        <li class="item">
+          <img src="https://picsum.photos/200/200/?image=2" alt="">
+          <p class="goods-title">藏美千足金</p>
+          <p class="price">￥1699.00</p>
+          <div class="mask">
+            <span class="delBtn">删除</span>
+          </div>
+        </li>
+        <li class="item">
+          <img src="https://picsum.photos/200/200/?image=3" alt="">
+          <p class="goods-title">藏美千足金</p>
+          <p class="price">￥1699.00</p>
+          <div class="mask">
+            <span class="delBtn">删除</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="operator">
+      <span class="add">添加</span>
+      <span class="edit">编辑</span>
+    </div>
+  </div>
+  <script>
+    $('.operator .edit').on('click',function(){
+      $('.goods-list').find('.mask').toggleClass('show');
+    });
+    $('.operator .add').on('click',function(){
+      var html = '';
+      for(var i=0; i< 3; i++) {
+        html += '<li class="item"><img src="https://picsum.photos/200/200/?image='+
+        Math.floor(Math.random() * 100 + 3)
+        +'" alt=""><p class="goods-title">珂兰 黄金手 猴哥款</p><p class="price">￥'+ 
+        Math.floor(Math.random() * 1000)
+        +'</p><div class="mask"><span class="delBtn">删除</span></div></li>'
+      }
+      $('.goods-list ul').append(html);
+    });
+    $('.goods-list').on('click','.delBtn',function(){
+      $(this).parents('.item').remove();
+    });
+  </script>
+</body>
+
+</html>
